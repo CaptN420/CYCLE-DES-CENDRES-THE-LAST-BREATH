@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+save/memoire.json
+save/*.tmp
+tests/apercus*.txt
+.DS_Store
+Thumbs.db
