@@ -15,6 +15,22 @@ Au lancement, un menu propose :
   l'Intervalle, THE AUTHOR, 6 fins dont une secrète, et un Créateur qui
   réécrit les règles pendant que vous jouez.
 
+## Comment ce jeu a été fait
+
+Projet **vibecoding** assumé, et documenté sans détour :
+
+- **prompts de design rédigés avec GPT** (univers, chapitres, mécaniques,
+  contraintes de fiabilité) — le prompt d'origine du chapitre I est dans
+  [`Prompt/Gpt_prompt.txt`](Prompt/Gpt_prompt.txt) ;
+- **code cuisiné avec DeepSeek V4.1 Flash**, piloté via l'agent Hermes
+  (Nous Research) : implémentation, intégration aux trois chapitres, chasse aux
+  bugs en exécution réelle ;
+- **direction, arbitrages et validation humaines** : 40 objets utiles plutôt
+  que 300 inutiles, deux inventaires strictement séparés, et 183 vérifications
+  automatisées avant d'annoncer quoi que ce soit.
+
+Détail complet dans [`CREDITS.md`](CREDITS.md).
+
 ## Le familier (compagnon autonome)
 
 Chaque chapitre peut être traversé **à deux**. Le familier est un second
@@ -285,6 +301,8 @@ salle secrète de la Bibliothèque, mille tombes, mort qui retire un souvenir et
 réveille le Créateur, anomalies de réalité, chambre de l'Author, trois
 écritures, offre du Créateur, verrouillage de la fin secrète, fins enregistrées,
 épilogue `origin_000.txt`.
+
+Crédits et méthode : [`CREDITS.md`](CREDITS.md).
 
 Aperçus des écrans :
 

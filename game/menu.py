@@ -63,7 +63,10 @@ def main_menu(term, mem) -> str | None:
             body.append(ui.paint("Aucune fin du Chapitre I enregistrée : le Chapitre II commencera",
                                  ui.MIDGREY))
             body.append(ui.paint("avec l'héritage de l'Oubli.", ui.MIDGREY))
-        body += ["", ui.paint("[R] effacer toute la mémoire   [Q] quitter", ui.MIDGREY)]
+        body += ["",
+                 ui.paint("Prompts : GPT   ·   Code : DeepSeek V4.1 Flash   ·   [C] crédits",
+                          ui.DARKGREY),
+                 ui.paint("[R] effacer toute la mémoire   [Q] quitter", ui.MIDGREY)]
         term.clear()
         term.draw(_box(lore.TITLE + "  ·  THE LAST BREATH", body,
                        "Choisis ton chapitre.", ui.GOLD))
@@ -74,6 +77,29 @@ def main_menu(term, mem) -> str | None:
             return "ch2"
         if key == "3":
             return "ch3"
+        if key == "c":
+            term.clear()
+            term.draw(_box("CRÉDITS", [
+                ui.paint("CYCLE DES CENDRES — THE LAST BREATH", ui.GOLD, bold=True),
+                "",
+                "Projet vibecoding : direction humaine, IA outillée.",
+                "",
+                ui.paint("Prompts de design", ui.CYAN, bold=True),
+                "  rédigés avec GPT — univers, chapitres, mécaniques,",
+                "  contraintes de fiabilité (Prompt/Gpt_prompt.txt).",
+                "",
+                ui.paint("Code", ui.CYAN, bold=True),
+                "  cuisiné avec DeepSeek V4.1 Flash via l'agent Hermes",
+                "  (Nous Research) : 3 chapitres, familier autonome,",
+                "  système d'objets anti-duplication, 183 tests.",
+                "",
+                ui.paint("Humain", ui.CYAN, bold=True),
+                "  arbitrages, ton, difficulté, validation en terminal.",
+                "",
+                "Détail : CREDITS.md dans le dépôt.",
+            ], "[ESC] retour", ui.GOLD))
+            term.getkey()
+            continue
         if key == "r":
             term.clear()
             term.draw(["", "", "  " + ui.paint("Effacer TOUTE la mémoire (chapitres I et II) ? (o/n)",
